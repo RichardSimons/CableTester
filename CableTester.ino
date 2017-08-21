@@ -222,7 +222,7 @@ void TestPin(int outputpin)
 			
 			myFile.print(X1Board[0].xioDigitalReadCached(i));
 			
-			if ((i == !outputpin & X1Board[0].xioDigitalReadCached(i)) | (i == outputpin & X1Board[0].xioDigitalReadCached(i)))
+			if ((i == !outputpin && X1Board[0].xioDigitalReadCached(i)) || (i == outputpin && X1Board[0].xioDigitalReadCached(i)))
 			{
 				myFile.print("*");
 
@@ -245,7 +245,7 @@ void TestPin(int outputpin)
 			
 			myFile.print(X1Board[1].xioDigitalReadCached(i));
 			
-			if ((i == !outputpin & X1Board[1].xioDigitalReadCached(i)) | (i == outputpin & !X1Board[1].xioDigitalReadCached(i)))
+			if ((i == !outputpin && X1Board[1].xioDigitalReadCached(i)) || (i == outputpin && !X1Board[1].xioDigitalReadCached(i)))
 			{
 				myFile.print("*");
 
@@ -277,7 +277,7 @@ void TestPin(int outputpin)
 			
 			myFile.print(X2Board[0].xioDigitalReadCached(i));
 			
-			if ((i == !outputpin & X2Board[0].xioDigitalReadCached(i)) | (i == outputpin & !X2Board[0].xioDigitalReadCached(i)))
+			if ((i == !outputpin && X2Board[0].xioDigitalReadCached(i)) || (i == outputpin && !X2Board[0].xioDigitalReadCached(i)))
 			{
 				myFile.print("*");
 
@@ -299,7 +299,7 @@ void TestPin(int outputpin)
 			Serial.println(X2Board[1].xioDigitalReadCached(i));
 			
 			myFile.print(X2Board[0].xioDigitalReadCached(i));
-			if ((i == !outputpin & X2Board[1].xioDigitalReadCached(i)) | (i == outputpin & !X2Board[1].xioDigitalReadCached(i)))
+			if ((i == !outputpin && X2Board[1].xioDigitalReadCached(i)) || (i == outputpin && !X2Board[1].xioDigitalReadCached(i)))
 			{
 				myFile.print("*");
 				
